@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,31 +6,42 @@
 
 }
 
-body{
+.title {
+    font-size: 1.5rem;
+    color: #985986;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.celendarContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: aquamarine;
 }
-.wrapper{
+
+.wrapper {
     background-color: aliceblue;
     width: 450px;
     border-radius: 10px;
 }
-.wrapper header{
+
+.wrapper header {
     display: flex;
     align-items: center;
     padding: 25px 30px 10px;
     justify-content: space-between;
 }
 
-header .current-date{
-font-size: 1.45rem;
-font-weight: 500;
+header .current-date {
+    font-size: 1.45rem;
+    font-weight: 500;
 }
 
-header .icon span{
+header .icon span {
     height: 38px;
     width: 38px;
     color: cornflowerblue;
@@ -44,70 +55,70 @@ header .icon span{
     background-color: antiquewhite;
 }
 
-header .icon span:hover{
+header .icon span:hover {
     background: rgb(129, 129, 248);
     color: aliceblue;
 }
 
 
-header .icon span:last-child{
+header .icon span:last-child {
     margin-right: -5px;
 }
 
-.celender{
+.celender {
     padding: 20px;
 }
 
-.celender ul 
-{
+.celender ul {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
     text-align: center;
 }
 
-.celender .days{
+.celender .days {
     margin-bottom: 20px;
 }
 
-.celender .weeks{
+.celender .weeks {
     font-weight: 500;
 }
 
-.celender ul li{
+.celender ul li {
     position: relative;
     width: calc(100% / 7);
 }
 
-.celender .days li{
+.celender .days li {
     z-index: 1;
-margin-top: 30px;
+    margin-top: 30px;
 }
 
-.days li.inactive{
+.days li.inactive {
     color: #aaa;
 }
-.days li.active{
+
+.days li.active {
     color: #fff;
 }
 
 
-.celender .days li::before{
+.celender .days li::before {
     position: absolute;
     content: "";
     height: 40px;
     width: 40px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);  
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: -1;
 }
-.days li:hover:before{
+
+.days li:hover:before {
     background: #f2f2f2;
 }
 
-.days li.active::before
-{
-background: #985986;
+.days li.active::before {
+    background: #985986;
 }
